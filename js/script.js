@@ -76,21 +76,16 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 */
 
 
-
+// creo le variabili dell'utente e del computer
 let userNumberEl = document.getElementById("userNumber");
 let pcNumberEl = document.getElementById("pcNumber");
-
-
-// Stampo in console i risultati
-console.log("Numero Utente: " + userNumberEl);
-console.log("Numero PC: " + pcNumberEl);
 
 
 // Aggiungo un evento al click del BUTTON "Genera"
 let numberGeneratorButtonEl = document.getElementById("numberGeneratorButton");
 
 numberGeneratorButtonEl.addEventListener("click", function() {
-
+    
     // Creo due variabili per generare i numeri casuali
     let x = Math.floor((Math.random() * 6) + 1);
     let y = Math.floor((Math.random() * 6) + 1);
@@ -99,6 +94,10 @@ numberGeneratorButtonEl.addEventListener("click", function() {
     // Assegno entrambe le variabili
     userNumberEl = x;
     pcNumberEl = y;
+    
+    // Stampo in console i risultati
+    console.log("Numero Utente: " + userNumberEl);
+    console.log("Numero PC: " + pcNumberEl);
 
     document.getElementById("userNumber").innerText = userNumberEl;
     document.getElementById("pcNumber").innerText = pcNumberEl;
