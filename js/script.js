@@ -80,33 +80,40 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 let userNumberEl = document.getElementById("userNumber");
 let pcNumberEl = document.getElementById("pcNumber");
 
-// Creo due variabili per generare i numeri casuali
-let x = Math.floor((Math.random() * 6) + 1);
-let y = Math.floor((Math.random() * 6) + 1);
 
-
-// Assegno entrambe le variabili
-userNumberEl = x;
-pcNumberEl = y;
-
-// Stampo in console i risultati e successivamente li stampo nel documento
+// Stampo in console i risultati
 console.log("Numero Utente: " + userNumberEl);
 console.log("Numero PC: " + pcNumberEl);
 
 
+// Aggiungo un evento al click del BUTTON "Genera"
+let numberGeneratorButtonEl = document.getElementById("numberGeneratorButton");
 
+numberGeneratorButtonEl.addEventListener("click", function() {
 
-document.getElementById("userNumber").innerText = userNumberEl;
-document.getElementById("pcNumber").innerText = pcNumberEl;
-
-
-// imposto il risultato finale in pagina
-if (userNumberEl > pcNumberEl) {
+    // Creo due variabili per generare i numeri casuali
+    let x = Math.floor((Math.random() * 6) + 1);
+    let y = Math.floor((Math.random() * 6) + 1);
     
-    document.getElementById("victory").innerText = "HAI VINTO!"
+    
+    // Assegno entrambe le variabili
+    userNumberEl = x;
+    pcNumberEl = y;
 
-} else {
+    document.getElementById("userNumber").innerText = userNumberEl;
+    document.getElementById("pcNumber").innerText = pcNumberEl;
+    
+    
 
-    document.getElementById("victory").innerText = "IL COMPUTER TI HA BATTUTO!";
+    // imposto il risultato finale in pagina
+    if (userNumberEl > pcNumberEl) {
+        
+        document.getElementById("victory").innerText = "HAI VINTO!"
+    
+    } else {
+    
+        document.getElementById("victory").innerText = "IL COMPUTER TI HA BATTUTO!";
+    
+    }
 
-}
+})
