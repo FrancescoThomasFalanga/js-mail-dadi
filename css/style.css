@@ -1,44 +1,57 @@
+/* GENERAL SETTINGS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* _____________________________________________ */
 body {
     background-color: #96acc2;
     font-family: 'Montserrat', sans-serif;
 }
+/* /GENERAL SETTINGS */
 
+
+/* COMMON SETTINGS */
 .container {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
-
+/* _____________________________________________ */
 .flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     gap: 20px;
-    margin: 50px;
 }
-
+/* _____________________________________________ */
+.column {
+    flex-direction: column;
+}
+.row {
+    flex-direction: row;
+}
+/* _____________________________________________ */
 .firstbg {
     background-color: #abe1e6;
     padding: 10px;
+    margin-top: 50px;
     border-radius: 40px;
 }
-
-
 .secondbg {
     background-color: #5d64c9;
+    padding: 10px;
+    border-radius: 40px;
 }
-
-
+/* _____________________________________________ */
 input, button {
     padding: 6px;
     text-align: center;
     border-radius: 20px;
     border-color: #96acc2;
+}
+/* _____________________________________________ */
+hr {
+    margin: 50px;
 }

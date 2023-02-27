@@ -55,3 +55,58 @@ loginButtonEl.addEventListener("click", function() {
     }
 
 })
+
+
+
+
+
+/*
+Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+Stabilire il vincitore, in base a chi fa il punteggio più alto.
+*/
+
+
+/*
+- genera un numero da 1 a 6, sia per il giocatore sia per il computer.
+? SE l'utente ha un numero più alto
+    Vince
+: ALTRIMENTI
+    Vince il Computer
+- stampa un messaggio di Vittoria
+*/
+
+
+
+let userNumberEl = document.getElementById("userNumber");
+let pcNumberEl = document.getElementById("pcNumber");
+
+// Creo due variabili per generare i numeri casuali
+let x = Math.floor((Math.random() * 6) + 1);
+let y = Math.floor((Math.random() * 6) + 1);
+
+
+// Assegno entrambe le variabili
+userNumberEl = x;
+pcNumberEl = y;
+
+// Stampo in console i risultati e successivamente li stampo nel documento
+console.log("Numero Utente: " + userNumberEl);
+console.log("Numero PC: " + pcNumberEl);
+
+
+
+
+document.getElementById("userNumber").innerText = userNumberEl;
+document.getElementById("pcNumber").innerText = pcNumberEl;
+
+
+// imposto il risultato finale in pagina
+if (userNumberEl > pcNumberEl) {
+    
+    document.getElementById("victory").innerText = "HAI VINTO!"
+
+} else {
+
+    document.getElementById("victory").innerText = "IL COMPUTER TI HA BATTUTO!";
+
+}
