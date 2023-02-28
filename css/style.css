@@ -55,3 +55,8 @@ input, button {
 hr {
     margin: 50px;
 }
+/* _____________________________________________ */
+img {
+    width: 80px;
+    background-color: #5d64c9;
+}
